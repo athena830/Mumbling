@@ -1,0 +1,8 @@
+D:\Practise\Mumbling\Mumbling\bin\Mumbling.dll.config
+D:\Practise\Mumbling\Mumbling\bin\Mumbling.dll
+D:\Practise\Mumbling\Mumbling\bin\Mumbling.pdb
+D:\Practise\Mumbling\Mumbling\bin\nunit.framework.dll
+D:\Practise\Mumbling\Mumbling\bin\nunit.framework.xml
+D:\Practise\Mumbling\Mumbling\obj\Debug\Mumbling.dll
+D:\Practise\Mumbling\Mumbling\obj\Debug\Mumbling.pdb
+D:\Practise\Mumbling\Mumbling\obj\Debug\Mumbling.csprojResolveAssemblyReference.cache

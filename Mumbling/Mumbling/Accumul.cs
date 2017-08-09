@@ -9,17 +9,26 @@ public class Accumul
 {
     public static String Accum(string source)
     {
-        string str = string.Empty;
-        char[] strAry = source.ToArray();
-        for (int i = 0; i < strAry.Length; i++)
+        return string.Join("-", TransformCharacters(source.ToArray()));       
+    }
+
+    private static IEnumerable<string> TransformCharacters(char[] sourceCharArray)
+    {
+        for (int i = 0; i < sourceCharArray.Length; i++)
         {
-            str += strAry[i].ToString().ToUpper();
-            for (int j = 0; j < i; j++)
-            {
-                str += strAry[i].ToString().ToLower();
-            }
-            str += "-";
+            var currentChar = sourceCharArray[i];
+            yield return UpperFirstCharacter(currentChar) +
+                         RepeatLowerCharacter(i, currentChar);
         }
-        return str.Substring(0,str.Length-1);
+    }
+
+    private static string UpperFirstCharacter(char currentChar)
+    {
+        return currentChar.ToString().ToUpper();
+    }
+
+    private static string RepeatLowerCharacter(int times, char currentChar)
+    {
+        return string.Concat(Enumerable.Repeat(currentChar.ToString().ToLower(), times));
     }
 }
